@@ -100,6 +100,12 @@ def display_infos(dimension_name, biomes_list, advancement_name, advancement_tit
         if advancement_json["done"]:
             print("Congratulations!")
 
+def finish():
+    print()
+    print("Press enter to exit.", end="")
+    input()
+    sys.exit()
+
 
 # Choose Minecraft installation path
 print("Enter the path to your Minecraft installation folder (enter nothing for the default path): ", end="")
@@ -119,7 +125,7 @@ path += "saves/"
 elements_list = os.listdir(path)
 if len(elements_list) < 1:
     print("No world found! Please create a world.")
-    sys.exit()
+    finish()
 print()
 if len(elements_list) > 1:
     print("The following worlds were found, please choose one (enter the associated number):")
@@ -134,7 +140,7 @@ path += "advancements/"
 elements_list = os.listdir(path)
 if len(elements_list) < 1:
     print("No player found! Please join your world first.")
-    sys.exit()
+    finish()
 print()
 if len(elements_list) > 1:
     print("The following player UUIDs were found, please choose one (you can find your UUID on namemc.com):")
@@ -151,3 +157,5 @@ with open(path) as json_file:
 
     display_infos("Nether", nether_biomes_list,
                   "minecraft:nether/explore_nether", "Hot Tourist Destinations", data)
+
+finish()
