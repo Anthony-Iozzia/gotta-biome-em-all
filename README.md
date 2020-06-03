@@ -14,9 +14,12 @@ This program is made for Windows 10 only. If you are comfortable with another pl
 
 ### Windows 10
 
+You can download the executable from the [releases](https://github.com/Anthony-Iozzia/gotta-biome-em-all/releases) page.  
+If you prefer to compile the source code, follow the next steps.
+
 Requirements:
 
-* [Python](https://www.python.org/downloads/)
+* [Python](https://www.python.org/downloads/) (check the box "Add Python to PATH" during the installation)
 
 To run the program:
 
